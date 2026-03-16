@@ -1,43 +1,49 @@
-//idea	Symbol
-// nie sú tak často využívané.
-// sú unikátne identifikátory pri tvorbe objektov.
+//idea	Funkcie a objekty
 
-	// const symbol1 = Symbol("bookNme");
-	// const symbol2 = Symbol("year");
-
-	// const book = {
-	// 	[symbol1]:	"Harry Potter",
-	// 	[symbol2]:	1997
-	// }
-
-	// console.log(book[symbol1]);
-	// console.log(book[symbol2]);
-
-	// const symbols = [Symbol("prvý"), Symbol("prvý")];
-
-	// console.log(symbols[0] === symbols [1]);	// false
-
-//--------------------------------------------------------------------------------
-
-// Symboly a ich zvláštnosti
-
-const symbol1 = Symbol("bookName");
-const symbol2 = Symbol("year");
-const symbol3 = Symbol("author");
-
-const book = {
-	[symbol1]:	"Harry Potter",
-	[symbol2]:	1997,
-	[symbol3]:	"J. K. Rowling"
+//	funkcia je objekt
+function a() {
+	const b = 10;
 }
 
-console.log(Object.keys(book));
-console.log(Object.values(book));
+a.greeting = "Ahoj";
+a.age = 30;
 
-console.log(book[symbol1]);
-console.log(book[symbol2]);
-console.log(book[symbol3]);
+console.log(a.greeting);
+console.log(a.age);
 
-console.log(symbol1.description);
-console.log(symbol2.description);
-console.log(symbol3.description);
+const myFunction = () => {
+	const c = 10;
+}
+
+myFunction.greeting1 = "Nazdar";
+console.log(myFunction.greeting1);
+
+// Sú primitívne dátové typy objekty?
+const primitivString = "David";
+// Object wrapper
+const stringObject = new String("Ja som Tasi.");
+console.log(stringObject.length);
+
+const rpimitivNuber = 123.433;
+// Object wrapper
+const numberObject = new Number (150.899);
+console.log(numberObject.toFixed(2));
+
+const primitiveBoolean = true
+// Object wrapper
+const booleanObject = new Boolean(false)
+console.log(booleanObject.toString())
+
+
+// Primitívne dátové typy
+console.log(typeof "Tasi")				//	object
+console.log(typeof 10)					//	object
+console.log(typeof true)				//	object
+console.log(typeof undefined)			//	undefined
+console.log(typeof null)				//	object
+console.log(typeof Symbol("test"))	//	Symbol
+
+// Neprimitívne dátové typy
+console.log(typeof {})					//	object
+console.log(typeof [])					//	object
+console.log(typeof function () { })	//	object
